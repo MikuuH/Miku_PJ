@@ -1,17 +1,22 @@
-def to_camel_case(text):
-    result = ''
-    find = '-' in text
-    fidn = '_' in text
-    if find:
-        res = text.replace("_", '-')
-        words = res.split('-')
-    elif fidn:
-        res = text.replace("-", '_')
-        words = res.split('_')
+
+
+
+def to_jaden_case(string):
+    rests = ""
+    if string is not None and string.strip():
+        text = string.split()
+        for result in text:
+            jon = ' '.join(text)
+            res = jon.capitalize()
+            print(res)
+            rests += res + " "
+        return rests.rstrip()
     else:
-        return text
-    if text:
-        for word in words[1:]:
-            result += word.capitalize()
-        return words[0] + result
-    
+        raise ValueError('NoText!')
+
+
+
+
+
+print(to_jaden_case('How can mirrors be real if our eyes aren\'t real'))
+
