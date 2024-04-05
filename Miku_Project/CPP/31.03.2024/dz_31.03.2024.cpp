@@ -6,5 +6,32 @@
 //Дополнительно : реализуйте функции для удаления книги из библиотеки и редактирования информации о книге.
 
 
-
 #include<iostream>
+#include<string>
+
+using namespace std;
+
+// данная структура нужна для книг.
+struct  Book
+{
+    string Name;
+    string Author;
+    int year;
+};
+
+// Структура Library привязанна к Book. содержиться массив и количество
+struct Library
+{
+    Book books[100];
+    int count;
+};
+
+// функция для добавления ккниги:
+void addBook(const Book* arrayBook) {
+
+    
+
+
+}
+
+
