@@ -3,6 +3,7 @@
 using namespace std;
 
 int main() {
+    std::cin.get();
     const int arraySize = 10;
     int array[arraySize];
     cout << "Введите " << arraySize << " целых чисел для заполнения массива:" << endl;
