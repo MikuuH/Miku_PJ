@@ -61,12 +61,12 @@ public:
 };
 
 int main() {
-    account* myAccount = nullptr;
-
     string name = "gg";
     string surname = "gg";
     double balanceCard = 45;
     int cardNumber = 55555;
+    myAccount = new account(name, surname, balanceCard, cardNumber);
+
 
     int choice;
     while (true) {
@@ -131,11 +131,6 @@ int main() {
             cout << "GoodBye!" << endl;
             break;
         }
-    }
-
-    if (myAccount != nullptr) {
-        myAccount->infoAccountPublic();
-        delete myAccount; 
     }
 
     return 0;
