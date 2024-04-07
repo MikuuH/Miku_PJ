@@ -50,26 +50,32 @@ class account {
 };
 
 int main() {
-    string name;
-    string surname;
-    int balance;
-    int cardNumber;
+    string name = "gg";
+    string surname = "gg";
+    int balance = 45;
+    int cardNumber = 5743664565567676;
 
-    // Получаем данные от пользователя
-    cout << "Enter name: ";
-    cin >> name;
-    cout << "Enter surname: ";
-    cin >> surname;
-    cout << "Enter balance: ";
-    cin >> balance;
-    cout << "Enter card number: ";
-    cin >> cardNumber;
+    int cout = 1;
+
 
     // Создаем объект класса account
     account* myAccount = new account(name, surname, balance, cardNumber);
 
-    // Вызываем метод для вывода информации о счете
-    myAccount->infoAccountPublic();
+    // 1 - баланс
+    // 
+    //
+    //
+
+
+    if (cout = 1) {
+        myAccount->infoAccountPublic();
+    } else if (cout = 2)
+    {
+        /* code */
+    }
+    
+
+
 
     // Освобождаем память
     delete myAccount;
