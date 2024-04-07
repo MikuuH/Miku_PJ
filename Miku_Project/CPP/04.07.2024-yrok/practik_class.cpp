@@ -45,7 +45,7 @@ public:
     }
 
     bool moneyTransfer(double b) {
-        if (b <= balance) { // Исправлено условие
+        if (b <= balance) { 
             balance -= b;
             return true;
         } else {
@@ -56,7 +56,7 @@ public:
 
     int editCardNumber(int newcard) {
         cardNumber = newcard;
-        return cardNumber; // Добавлено возвращаемое значение
+        return cardNumber;
     }
 };
 
@@ -65,7 +65,7 @@ int main() {
     string surname = "gg";
     double balanceCard = 45;
     int cardNumber = 55555;
-    myAccount = new account(name, surname, balanceCard, cardNumber);
+    account* myAccount =  new account(name, surname, balanceCard, cardNumber);
 
 
     int choice;
