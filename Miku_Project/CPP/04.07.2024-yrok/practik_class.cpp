@@ -74,8 +74,11 @@ int main() {
     double balanceCard = 45;
     int cardNumber = 55555;
 
-    int choice = 0;
-    do {
+    int choice;
+    while (true)
+    {
+        cout << "please enter choice: " << endl;
+        cin >> choice;
         if (choice == 0) {
             if (myAccount != nullptr) {
                 int coutAccount;
@@ -122,8 +125,9 @@ int main() {
         else if (choice == 10)
         {
             cout << "GoodBye!" << endl;
+            break;
         }
-    } while (choice == 10);
+    }
 
 
 
