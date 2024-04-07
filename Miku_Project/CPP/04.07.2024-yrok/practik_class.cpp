@@ -50,26 +50,30 @@ class account {
 };
 
 int main() {
+    account* myAccount;
+
     string name = "gg";
     string surname = "gg";
-    int balance = 45;
+    double balance = 45;
     int cardNumber = 5743664565567676;
 
     int cout = 1;
 
 
-    // Создаем объект класса account
-    account* myAccount = new account(name, surname, balance, cardNumber);
-
+    // 0 - создаем аккаунт
     // 1 - баланс
-    // 
-    //
-    //
+    //  2 - добавить денег
+    // 3 - перевести деньги
+    // 4 - смена номера карты
 
+    if (cout = 0) {
+        myAccount = new account(name, surname, balance, cardNumber);
 
-    if (cout = 1) {
+    }
+    else if (cout = 1) {
         myAccount->infoAccountPublic();
-    } else if (cout = 2)
+    }
+    else if (cout = 2)
     {
         /* code */
     }
