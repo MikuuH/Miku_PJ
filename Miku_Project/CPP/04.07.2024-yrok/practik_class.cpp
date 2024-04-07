@@ -138,6 +138,9 @@ int main() {
             cout << "GoodBye!" << endl;
             return 0;
         }
+        case 11:
+            delete myAccount;
+            cout << "Account deleted!" << endl;
         }
     }
 
