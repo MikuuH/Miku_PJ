@@ -13,6 +13,8 @@ struct BIO
 
 
 class account {
+        BIO bio;
+
 private:
     int dateOfBirth;
     int inn;
@@ -22,16 +24,18 @@ private:
     string IsBlocked = "no";
 
 public:
-    string name;
-    string surname;
     int balance = 0;
     int cardNumber;
 
-    account(string n, string s, int b, int c) : name(n), surname(s), balance(b), cardNumber(c) {}
-
+    account(string n, string s, int b, int c) {
+        bio.name = n;
+        bio.surname = s;
+        balance = b;
+        cardNumber = c;
+}
     void infoAccountPublic() {
-        cout << "Name: " << name << endl;
-        cout << "Surname: " << surname << endl;
+        cout << "Name: " << bio.name << endl;
+        cout << "Surname: " << bio.surname << endl;
         cout << "Balance: " << balance << endl;
         cout << "CardNumber: " << cardNumber << endl;
     }
