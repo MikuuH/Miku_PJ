@@ -65,7 +65,7 @@ int main() {
     string surname = "gg";
     double balanceCard = 45;
     int cardNumber = 55555;
-    account* myAccount;
+    account* myAccount = nullptr;
 
 
     int choice;
