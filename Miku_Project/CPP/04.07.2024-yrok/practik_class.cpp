@@ -3,6 +3,15 @@
 
 using namespace std;
 
+struct BIO
+{
+    string name;
+    string surname;
+
+
+};
+
+
 class account {
 private:
     int dateOfBirth;
@@ -141,6 +150,7 @@ int main() {
         case 11:
             delete myAccount;
             cout << "Account deleted!" << endl;
+            break;
         }
     }
 
