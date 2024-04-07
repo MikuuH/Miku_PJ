@@ -2,64 +2,67 @@
 #include<string>
 
 using namespace std;
+#include <iostream>
+using namespace std;
 
-struct BIO
-{
+struct BIO {
     string name;
     string surname;
-
-
 };
 
+struct CardInfo {
+    int cardNumber;
+    int balance = 0;
+    int cvv;
+};
 
-class account {
-        BIO bio;
-
+class Account {
 private:
     int dateOfBirth;
     int inn;
-    int cvv;
     int term;
     string isLoan = "no";
     string IsBlocked = "no";
 
 public:
-    int balance = 0;
-    int cardNumber;
+    BIO bio;
+    CardInfo cardInfo;
 
-    account(string n, string s, int b, int c) {
+    Account(string n, string s, int b, int c, int cV) {
         bio.name = n;
         bio.surname = s;
-        balance = b;
-        cardNumber = c;
-}
+        cardInfo.balance = b;
+        cardInfo.cardNumber = c;
+        cardInfo.cvv = cV;
+    }
+
     void infoAccountPublic() {
         cout << "Name: " << bio.name << endl;
         cout << "Surname: " << bio.surname << endl;
-        cout << "Balance: " << balance << endl;
-        cout << "CardNumber: " << cardNumber << endl;
+        cout << "Balance: " << cardInfo.balance << endl;
+        cout << "CardNumber: " << cardInfo.cardNumber << endl;
     }
 
     void infoAccountPrivate() {
         cout << "dateOfBirth: " << dateOfBirth << endl;
         cout << "inn: " << inn << endl;
-        cout << "cvv: " << cvv << endl;
+        cout << "cvv: " << cardInfo.cvv << endl;
         cout << "term: " << term << endl;
         cout << "isLoan: " << isLoan << endl;
         cout << "IsBlocked: " << IsBlocked << endl;
     }
 
     void AddBalance(int b) {
-        balance += b;
+        cardInfo.balance += b;
     }
 
     void minusBalance(int b) {
-        balance -= b;
+        cardInfo.balance -= b;
     }
 
     bool moneyTransfer(double b) {
-        if (b <= balance) { 
-            balance -= b;
+        if (b <= cardInfo.balance) { 
+            cardInfo.balance -= b;
             return true;
         } else {
             cout << "Insufficient funds" << endl;
@@ -67,11 +70,11 @@ public:
         }
     }
 
-    int editCardNumber(int newcard) {
-        cardNumber = newcard;
-        return cardNumber;
+    void editCardNumber(int newcard) {
+        cardInfo.cardNumber = newcard;
     }
 };
+
 
 int main() {
     string name = "gg";
