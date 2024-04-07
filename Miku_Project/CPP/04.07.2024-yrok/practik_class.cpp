@@ -18,11 +18,11 @@ class account {
         int cardNumber;
 
         account(
-        string name, string surname, int balance, int cardNumber) {
-            name = name;
-            surname = surname;
-            balance = balance;
-            cardNumber = cardNumber;
+        string n, string s, int b, int c) {
+            name = n;
+            surname = s;
+            balance = b;
+            cardNumber = c;
     };
 
     void infoAccountPublic() const {
@@ -40,17 +40,17 @@ class account {
         cout << "IsBlocked: " << IsBlocked << endl;
     }
 
-    void AddBalance(int amout) {
-        balance += amout;
+    void AddBalance(int b) {
+        balance += b;
     }
 
-    void minusBalance(int amout) {
-        balance -= amout;
+    void minusBalance(int b) {
+        balance -= b;
     }
 
-    bool moneyTransfer(double amout) {
-        if (amout <= balance) {
-            balance -= amout;
+    bool moneyTransfer(double b) {
+        if (b >= balance) {
+            balance -= b;
             return true;
         } else {
             cout << "Don't you have anything to do? You don't have any money. Sit here and eat your lollipop!!!" << endl;
@@ -114,6 +114,8 @@ int main() {
 
 
     if (myAccount != nullptr) {
+        myAccount->moneyTransfer(55);
+
         myAccount->infoAccountPublic();
     }
 
