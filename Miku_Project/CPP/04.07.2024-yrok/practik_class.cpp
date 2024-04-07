@@ -25,13 +25,13 @@ class account {
             cardNumber = cardNumber;
     };
 
-    void infoAccountPublic() {
+    void infoAccountPublic() const {
         cout << "Name:" << name << endl;
         cout << "Surname: " << surname << endl;
         cout << "Balance: " << balance << endl;
     }
 
-    void infoAccountPrivate() {
+    void infoAccountPrivate() const {
         cout << "dateOfBirth: " << dateOfBirth << endl;
         cout << "inn: " << inn << endl;
         cout << "cvv: " << cvv << endl;
@@ -46,6 +46,16 @@ class account {
 
     void minusBalance(int amout) {
         balance -= amout;
+    }
+
+    bool moneyTransfer(double amout){
+        if (amout <= balance) {
+            balance -= amout;
+            return true;
+        } else {
+            cout << "Don't you have anything to do? You don't have any money. Sit here and eat your lollipop!!!" << endl;
+            return false;
+        }
     }
 };
 
@@ -66,8 +76,12 @@ int main() {
     // 4 - смена номера карты
 
 
-    if (choice == 1) {
+    if (choice == 0) {
         myAccount = new account(name, surname, balance, cardNumber);
+    }
+    else if (choice == 1)
+    {
+        myAccount->infoAccountPublic();
     }
     else if (choice == 2) {
         cout << "Enter amount: ";
@@ -76,8 +90,20 @@ int main() {
     }
     else if (choice == 3)
     {
+        cout << "enter how much money you want to transfer: " << endl;
+        cout << "number of the card you want to transfer to: " << endl;
+        cin >> balance;
+        int transfer = myAccount->moneyTransfer(balance);
+
+        if (transfer) {
+            cout << "the money was successfully transferred" << endl;
+        }
+    }
+    else if (choice == 4)
+    {
         /* code */
     }
+
 
 
     if (myAccount != nullptr) {
