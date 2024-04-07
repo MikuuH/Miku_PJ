@@ -50,15 +50,14 @@ class account {
 };
 
 int main() {
-    account* myAccount;
+    account* myAccount = nullptr;
 
     string name = "gg";
     string surname = "gg";
     double balance = 45;
     int cardNumber = 5743664565567676;
 
-    int cout = 1;
-
+    int choice;
 
     // 0 - создаем аккаунт
     // 1 - баланс
@@ -66,23 +65,24 @@ int main() {
     // 3 - перевести деньги
     // 4 - смена номера карты
 
-    if (cout = 0) {
-        myAccount = new account(name, surname, balance, cardNumber);
 
+    if (choice == 1) {
+        myAccount = new account(name, surname, balance, cardNumber);
     }
-    else if (cout = 1) {
-        myAccount->infoAccountPublic();
+    else if (choice == 2) {
+        cout << "Enter amount: ";
+        cin >> balance;
+        myAccount->AddBalance(balance);
     }
-    else if (cout = 2)
+    else if (choice == 3)
     {
         /* code */
     }
-    
 
 
-
-    // Освобождаем память
-    delete myAccount;
+    if (myAccount != nullptr) {
+        myAccount->infoAccountPublic();
+    }
 
     return 0;
 }
