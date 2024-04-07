@@ -70,7 +70,7 @@ int main() {
     string surname = "gg";
     double balanceCard = 45;
     int cardNumber = 55555;
-    Account* myAccount = new Account(name, surname, balanceCard, cardNumber, 123);
+    Account* myAccount = nullptr;
 
 
     int choice;
@@ -85,7 +85,7 @@ int main() {
                 cout << "You already have an account. Are you sure you want to create a new one? 1 | 0" << endl;
                 cin >> coutAccount;
                 if (coutAccount == 1) {
-                    myAccount = new account(name, surname, balanceCard, cardNumber);
+                    myAccount = new Account(name, surname, balanceCard, cardNumber, 123);
                 } else {
                     cout << "ok, a new account will not be created" << endl;
                 }
