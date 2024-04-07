@@ -8,6 +8,7 @@
         "ostream": "cpp",
         "string": "cpp",
         "new": "cpp",
-        "cstddef": "cpp"
+        "cstddef": "cpp",
+        "algorithm": "cpp"
     }
 }
