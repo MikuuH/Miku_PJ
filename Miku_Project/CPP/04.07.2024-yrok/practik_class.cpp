@@ -29,6 +29,7 @@ class account {
         cout << "Name:" << name << endl;
         cout << "Surname: " << surname << endl;
         cout << "Balance: " << balance << endl;
+        cout << "CardNumber: " << cardNumber << endl;
     }
 
     void infoAccountPrivate() const {
@@ -114,8 +115,6 @@ int main() {
 
 
     if (myAccount != nullptr) {
-        myAccount->editCardNumber(12345);
-
         myAccount->infoAccountPublic();
     }
 
