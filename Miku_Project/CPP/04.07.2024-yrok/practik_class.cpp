@@ -48,7 +48,7 @@ class account {
         balance -= amout;
     }
 
-    bool moneyTransfer(double amout){
+    bool moneyTransfer(double amout) {
         if (amout <= balance) {
             balance -= amout;
             return true;
@@ -57,6 +57,12 @@ class account {
             return false;
         }
     }
+
+    int editCardNumber(int newcard) {
+        cardNumber = newcard;
+
+
+    }
 };
 
 int main() {
@@ -64,20 +70,13 @@ int main() {
 
     string name = "gg";
     string surname = "gg";
-    double balance = 45;
-    int cardNumber = 5743664565567676;
+    double balanceCard = 45;
+    int cardNumber = 55555;
 
-    int choice;
-
-    // 0 - создаем аккаунт
-    // 1 - баланс
-    //  2 - добавить денег
-    // 3 - перевести деньги
-    // 4 - смена номера карты
-
+    int choice = 0;
 
     if (choice == 0) {
-        myAccount = new account(name, surname, balance, cardNumber);
+        myAccount = new account(name, surname, balanceCard, cardNumber);
     }
     else if (choice == 1)
     {
@@ -85,15 +84,15 @@ int main() {
     }
     else if (choice == 2) {
         cout << "Enter amount: ";
-        cin >> balance;
-        myAccount->AddBalance(balance);
+        cin >> balanceCard;
+        myAccount->AddBalance(balanceCard);
     }
     else if (choice == 3)
     {
         cout << "enter how much money you want to transfer: " << endl;
         cout << "number of the card you want to transfer to: " << endl;
-        cin >> balance;
-        int transfer = myAccount->moneyTransfer(balance);
+        cin >> balanceCard;
+        int transfer = myAccount->moneyTransfer(balanceCard);
 
         if (transfer) {
             cout << "the money was successfully transferred" << endl;
@@ -101,7 +100,15 @@ int main() {
     }
     else if (choice == 4)
     {
-        /* code */
+        string newcard;
+        cout << "enter new number curd. Enter 5 numbers" << endl;
+        if (newcard.length() <= 5) {
+            cout << "NONONONOONONNO IS NOT 5 LENGHT BRAT" << endl;
+        } else {
+            cin >> newcard;
+            int newCardInt = stoi(newcard);
+            myAccount->editCardNumber(newCardInt);
+        }
     }
 
 
