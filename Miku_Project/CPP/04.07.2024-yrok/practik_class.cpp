@@ -78,13 +78,14 @@ int main() {
             if (myAccount != nullptr) {
                 int coutAccount;
                 cout << "You already have an account. Are you sure you want to create a new one? 1 | 0" << endl;
-                cin >> coutAccount; 
+                cin >> coutAccount;
                 if (coutAccount == 1) {
                     myAccount = new account(name, surname, balanceCard, cardNumber);
                 } else {
                     cout << "ok, a new account will not be created" << endl;
                 }
             }
+            break;
         }
         case 1: {
             if (myAccount != nullptr) {
@@ -92,6 +93,7 @@ int main() {
             } else {
                 cout << "You don't have an account." << endl;
             }
+            break;
         }
         case 2: {
             if (myAccount != nullptr) {
@@ -101,6 +103,7 @@ int main() {
             } else {
                 cout << "You don't have an account." << endl;
             }
+            break;
         }
         case 3: {
             if (myAccount != nullptr) {
@@ -113,6 +116,7 @@ int main() {
             } else {
                 cout << "You don't have an account." << endl;
             }
+            break;
         }
         case 4: {
             if (myAccount != nullptr) {
@@ -128,13 +132,15 @@ int main() {
             } else {
                 cout << "You don't have an account." << endl;
             }
+            break;
         }
         case 10: {
             cout << "GoodBye!" << endl;
-            break;
+            return 0;
+        }
         }
     }
-    }
+
 
     return 0;
 }
