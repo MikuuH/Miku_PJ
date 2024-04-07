@@ -65,18 +65,20 @@ int main() {
     string surname = "gg";
     double balanceCard = 45;
     int cardNumber = 55555;
-    account* myAccount =  new account(name, surname, balanceCard, cardNumber);
+    account* myAccount;
 
 
     int choice;
     while (true) {
         cout << "please enter choice: " << endl;
         cin >> choice;
-        if (choice == 0) {
+        switch (choice)
+        {
+        case 0: {
             if (myAccount != nullptr) {
                 int coutAccount;
                 cout << "You already have an account. Are you sure you want to create a new one? 1 | 0" << endl;
-                cin >> coutAccount; // Исправлено
+                cin >> coutAccount; 
                 if (coutAccount == 1) {
                     myAccount = new account(name, surname, balanceCard, cardNumber);
                 } else {
@@ -84,14 +86,14 @@ int main() {
                 }
             }
         }
-        else if (choice == 1) {
+        case 1: {
             if (myAccount != nullptr) {
                 myAccount->infoAccountPublic();
             } else {
                 cout << "You don't have an account." << endl;
             }
         }
-        else if (choice == 2) {
+        case 2: {
             if (myAccount != nullptr) {
                 cout << "Enter amount: ";
                 cin >> balanceCard;
@@ -100,7 +102,7 @@ int main() {
                 cout << "You don't have an account." << endl;
             }
         }
-        else if (choice == 3) {
+        case 3: {
             if (myAccount != nullptr) {
                 cout << "Enter amount to transfer: ";
                 cin >> balanceCard;
@@ -112,7 +114,7 @@ int main() {
                 cout << "You don't have an account." << endl;
             }
         }
-        else if (choice == 4) {
+        case 4: {
             if (myAccount != nullptr) {
                 string newcard;
                 cout << "Enter new card number (5 digits): ";
@@ -127,10 +129,11 @@ int main() {
                 cout << "You don't have an account." << endl;
             }
         }
-        else if (choice == 10) {
+        case 10: {
             cout << "GoodBye!" << endl;
             break;
         }
+    }
     }
 
     return 0;
