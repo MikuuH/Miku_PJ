@@ -114,7 +114,7 @@ int main() {
 
 
     if (myAccount != nullptr) {
-        myAccount->moneyTransfer(55);
+        myAccount->editCardNumber(12345);
 
         myAccount->infoAccountPublic();
     }
