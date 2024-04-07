@@ -2,8 +2,7 @@
 #include<string>
 
 using namespace std;
-#include <iostream>
-using namespace std;
+
 
 struct BIO {
     string name;
@@ -43,15 +42,6 @@ public:
         cout << "CardNumber: " << cardInfo.cardNumber << endl;
     }
 
-    void infoAccountPrivate() {
-        cout << "dateOfBirth: " << dateOfBirth << endl;
-        cout << "inn: " << inn << endl;
-        cout << "cvv: " << cardInfo.cvv << endl;
-        cout << "term: " << term << endl;
-        cout << "isLoan: " << isLoan << endl;
-        cout << "IsBlocked: " << IsBlocked << endl;
-    }
-
     void AddBalance(int b) {
         cardInfo.balance += b;
     }
@@ -75,13 +65,12 @@ public:
     }
 };
 
-
 int main() {
     string name = "gg";
     string surname = "gg";
     double balanceCard = 45;
     int cardNumber = 55555;
-    account* myAccount = nullptr;
+    Account* myAccount = new Account(name, surname, balanceCard, cardNumber, 123);
 
 
     int choice;
