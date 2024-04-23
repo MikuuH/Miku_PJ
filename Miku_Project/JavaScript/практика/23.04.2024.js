@@ -13,6 +13,8 @@ if (lang == 'ru') {
 }
  */
 
+
+// ПРАВИЛЬНОЕ РЕШЕНИЕ //
 let lang = 'ru';
 
 switch (lang) {
