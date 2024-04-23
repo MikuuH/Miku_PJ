@@ -5,7 +5,7 @@ using namespace std;
 // Функция для вывода звездочек в виде квадрата
 
 void drawSquare(int size) {
-
+g
    for (int i = 0; i < size; i++) {
 
        for (int j = 0; j < size; j++) {
