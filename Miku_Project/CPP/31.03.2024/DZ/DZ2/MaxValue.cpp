@@ -31,7 +31,7 @@ int main() {
     // cout << "maxValue: FLOAT: " << maxValue<float>(7.9, 1.9) << endl;
     // cout << "maxValue: CHAR: " << maxValue<string>("люблю", "МИКУ");
 
-    const int size_arr = 5;
+    int size_arr = 5;
     int arr[size_arr] = {1, 2, 3, 4, 5};
     cout << "printArray" << printArray(arr, size_arr) << endl;
 
