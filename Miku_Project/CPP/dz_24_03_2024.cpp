@@ -26,14 +26,24 @@ using namespace std;
 template <typename T>
 T Max(T one, T two) {
     if (one > two) {
-        cout << one << "больше" << two;
+        cout << one << " больше " << two << endl;
     } else {
-        cout << one << "меньше" << two;
+        cout << one << " меньше " << two << endl;
     }
     return 0;
 
 }
 
+template <typename T>
+T Sum(T one, T two) {
+    return one + two;
+}
+
 int main() {
-    Max(1, 5);
+    cout << "FUNC: Max. Type: INT: " << Max(10, 6);
+    cout << "FUNC: Max. Type: Double: " << Max(10.511, 6.22);
+
+    cout << "FUNC: Sum. Type INT: " << Sum(1, 10) << endl;
+    cout << "FUNC: Max. Type: Double: " << Sum(10.511, 6.22) << endl;
+
 }
