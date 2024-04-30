@@ -55,7 +55,7 @@ let num = 1;
 let res;
 
 if (num == 1 || num == 2) {
-	res = 'a';
+	res = 'a';п
 }
 
 if (num == 3) {
