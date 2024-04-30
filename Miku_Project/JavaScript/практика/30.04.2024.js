@@ -95,3 +95,75 @@
 // printArr(arr)
 
 // 12
+// кроме первого и последнего
+// function printArr(arr) {
+//     for (let mass = 1; mass < arr.length - 1; mass ++) {
+//         console.log(arr[mass]);
+//     }
+// }
+
+// let arr = ['a', 'b', 'c', 'd', 'e'];
+// printArr(arr)
+
+// 13
+// function printArr(arr) {
+//     for (let mass = arr.length - 1; mass >= 0; mass--) {
+//         console.log(arr[mass]);
+//     }
+// }
+
+
+// let arr = ['a', 'b', 'c', 'd', 'e'];
+// printArr(arr)
+
+//14
+//Исправьте ошибку, допущенную в следующем коде:
+// let arr = ['a', 'b', 'c', 'd', 'e'];
+// for (let i = 0; i <= arr.length - 1; i++) {
+// 	console.log(arr[i]);
+// }
+// ошибкой можно назвать то, что там undefined, который решился arr.length - 1
+
+// 15
+// Выведите в консоль те элементы массива, которые больше 3-х, но меньше 10.
+// let arr = [2, 5, 9, 15, 1, 4];
+// for (let elem of arr) {
+//     if (elem > 3 && elem < 10) {
+//         console.log(elem``);
+//     }
+// }
+
+// 16
+// Выведите в консоль те элементы объекта, значения которых - нечетные числа.
+// let obj = {a: 1, b: 2, c: 3, d: 4, e: 5};
+// for (let i in obj) {
+//     if (obj[i] % 2 === 1) {
+//         console.log(obj[i]);
+//     }
+// }
+
+// 17
+// Найдите сумму четных чисел от 2 до 100.
+// let res = 0;
+// for (let i = 2; i <= 100; i++) {
+//     if (i % 2 === 0) {
+//         res += i
+//     }
+//     console.log(res);
+// }
+
+// 18
+// Найдите сумму нечетных чисел от 1 до 99.
+// let res = 0;
+// for (let i = 1; i <= 99; i+=2) {
+//     res += i;
+//     console.log(res);
+// }
+
+// 19
+// Найдите произведение целых чисел от 1 до 20.
+// let res = 1;
+// for (let i = 1; i <= 20; i++) {
+//     res *= i
+// }
+// console.log(res);
