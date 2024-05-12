@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Демонстрация работы с объектами</title>
+    <script>
+        // Создание объекта с помощью литерала объекта
+        let person = {
+            name: "Иван",
+            age: 30,
+            greet: function() {
+                console.log("Привет! Меня зовут " + this.name + ".");
+            }
+        };
+
+        // Демонстрация доступа к свойствам
+        console.log("Имя: " + person.name);
+        console.log("Возраст: " + person['age']);
+
+        // Добавление свойства
+        person.job = "Инженер";
+        console.log("Профессия: " + person.job);
+
+        // Вызов метода
+        person.greet();
+
+        // Удаление свойства
+        delete person.age;
+        console.log("Возраст после удаления: " + person.age); // undefined
+
+        // Перебор всех свойств объекта
+        console.log("Все свойства объекта:");
+        for (let key in person) {
+            console.log(key + ": " + person[key]);
+        }
+    </script>
+</head>
+<body>
+    <h1>Демонстрация работы с объектами в JavaScript</h1>
+    <p>Откройте консоль разработчика, чтобы увидеть результаты.</p>
+</body>
+</html>

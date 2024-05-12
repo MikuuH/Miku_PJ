@@ -46,7 +46,7 @@ class rectangle : public Shape {
     public:
         int weight = 5;
         int height = 5;
-
+        
         // переопределяем calculateArea
         double calculateArea() const override {
             return weight * height;
