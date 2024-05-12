@@ -97,17 +97,19 @@ class SinglyLinkedList {
 
 int main() {
     SinglyLinkedList list;
-    list.pushFront(10);
-    list.pushFront(20);
-    list.pushFront(30);
-    list.insert(1, 25);
+    for (int i = 10; i >= 1; i--) {
+        list.pushFront(i);
+    }
 
-    cout << "List after inserting 25 at index 1: ";
+    cout << "от 1 до 10: ";
+    list.print();
+
+    list.insert(2, 25);
+    cout << "25 в 2: ";
     list.print();
 
     list.remove(2);
-
-    cout << "List after removing the element at index 2: ";
+    cout << "удалим элемент по индексу 2: ";
     list.print();
 
     return 0;

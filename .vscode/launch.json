@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/miku/Документы/VsCode/Miku_PJ/Miku_Project/CPP/28_04_2024_YROK",
-      "program": "/home/miku/Документы/VsCode/Miku_PJ/Miku_Project/CPP/28_04_2024_YROK/build/Debug/outDebug",
+      "cwd": "/run/media/miku/62921dd4-dc8a-4444-a924-84b298e312d9/Miku_PJ/Miku_Project/CPP/12_05_2024_yrok",
+      "program": "/run/media/miku/62921dd4-dc8a-4444-a924-84b298e312d9/Miku_PJ/Miku_Project/CPP/12_05_2024_yrok/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
