@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../../Загрузки"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "html"
+	}
+}
