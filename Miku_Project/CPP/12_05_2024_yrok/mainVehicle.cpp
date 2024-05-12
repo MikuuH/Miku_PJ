@@ -1,20 +1,8 @@
-//Создание базового класса и трех наследников с переопределением методов
-//Цель : Практика в определении базового класса и производных классов с переопределением виртуальных функций для демонстрации полиморфизма.
-//
-//Описание задания :
-//
-//Определите базовый класс Vehicle(Транспортное средство) :
-//
-//  Создайте базовый класс Vehicle с виртуальной функцией displayInfo(), которая выводит информацию о транспортном средстве.
-//  Добавьте в класс Vehicle защищенные атрибуты maxSpeed(максимальная скорость) и fuelType(тип топлива).
-//  Создайте три производных класса : Car, Bike, и Boat :
-//
-//Класс Car должен содержать дополнительный атрибут numberOfDoors(количество дверей).
-//Класс Bike должен содержать дополнительный атрибут hasBasket(наличие корзины).
-//Класс Boat должен содержать дополнительный атрибут boatType(тип лодки).
-//Переопределите функцию displayInfo() в каждом из производных классов :
-//
-//Функция должна выводить всю информацию о транспортном средстве, включая уникальные атрибуты каждого класса.
+
+
+
+
+
 //В функции main() создайте объекты каждого класса и продемонстрируйте полиморфное поведение :
 //
 //Создайте массив или вектор указателей на Vehicle.
@@ -27,7 +15,6 @@
 
 using namespace std;
 
-
 class Vehicle {
     private:
         int maxSpeed;
@@ -39,23 +26,64 @@ class Vehicle {
             fuelType = fuelTypeInfo;
         };
 
-        void VehicleFullInfo {
+        virtual void VehicleFullInfo() const {
             cout << "maxSpeed: " << maxSpeed << endl;
             cout << "fuelType: " << fuelType << endl;
-        }
-
-        
-
+        };
+    };
 
 
-}
-
-
-class Car {
+class Car : public Vehicle {
     public:
-        int wheels;
-        string engine;
+        int numberOfDoors;
+
+        Car(int maxSpeedInfo, string fuelTypeInfo, int doors) : Vehicle(maxSpeedInfo, fuelTypeInfo), numberOfDoors(doors) {}
+
+        void VehicleFullInfo() const override {
+            Vehicle::VehicleFullInfo();
+            cout << "numberOfDoors: " << numberOfDoors << endl;
+        };
+    };
+
+
+class Bike : public Vehicle {
+    public:
+        bool hasBasket;
+
+        Bike(int maxSpeedInfo, string fuelTypeInfo, bool basked) : Vehicle(maxSpeedInfo, fuelTypeInfo), hasBasket(basked) {}
+
+        void VehicleFullInfo() const override {
+            Vehicle::VehicleFullInfo();
+            cout << "Basket: " << (hasBasket ? "Yes" : "No") << endl;
+    };
+};
+
+
+class Boat : public Vehicle {
+    public:
+        string boatType;
+
+        Bike(int maxSpeedInfo, string fuelTypeInfo, string boatTypeInfo) : Vehicle(maxSpeedInfo, fuelTypeInfo), boatType(boatTypeInfo) {}
+
+        void VehicleFullInfo() const override {
+            Vehicle::VehicleFullInfo();
+            cout << "boatTypeInfo: " << boatTypeInfo << endl;
+
+        }
 }
 
 
+
+int main() {
+    Car car(200, "Gasoline", 4);
+    Bike bike(30, "Pedal", true);
+
+    cout << "Car information:" << endl;
+    car.VehicleFullInfo();
+
+    cout << "\nBike information:" << endl;
+    bike.VehicleFullInfo();
+
+    return 0;
+}
 
