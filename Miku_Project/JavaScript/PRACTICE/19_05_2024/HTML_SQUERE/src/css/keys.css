@@ -1,0 +1,8 @@
+.square div {
+    width: 90px;
+    height: 90px;
+}
+
+#square1 {
+    background-color: blue;
+}
