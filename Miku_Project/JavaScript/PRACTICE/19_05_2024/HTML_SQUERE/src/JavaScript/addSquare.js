@@ -15,10 +15,12 @@ document.getElementById('createButton').addEventListener('click', function() {
     // Добавление нового абзаца в контейнер
     document.getElementById('container').appendChild(square);
 
-    var paragraph = document.createElement('p');
-    paragraph.textContent = square.id = "Id: " + Date.now() + String(Math.floor(Math.random() * 100));
+    var addId = document.createElement('p');
+
+    // уникальный айди
+    addId.textContent = square.id = "Id: " + Date.now() + String(Math.floor(Math.random() * 100));
 
     container.appendChild(square);
-    container.appendChild(paragraph);
+    container.appendChild(addId);
 
 });
