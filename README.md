@@ -1,1 +1,3 @@
-Выполняю задания с К.А ШАГ (Украина).  По мимо этого, выполняю, и изучаю другие языки, стараясь выполнять задачки на кодварс
+I do practice and homework at my IT STEP computer academy.
+
+In addition to this, I complete tasks on my own and study. Everything I do is posted to GitHub. Thank you!
