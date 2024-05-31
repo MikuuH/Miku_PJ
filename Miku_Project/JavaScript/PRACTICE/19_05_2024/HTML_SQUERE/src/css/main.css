@@ -1,5 +1,9 @@
 /* src/css/main.css */
 
+body {
+    background-color: rgb(8, 8, 8);
+    color: aliceblue;
+}
 
 .logElement {
     display: flex;
@@ -61,3 +65,13 @@ textarea{
     margin-left: -100px;
 }
 
+.Kvadrat {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    border-radius: 10px;
+}
+
+.Kvadrat-text {
+    display: none;
+}
