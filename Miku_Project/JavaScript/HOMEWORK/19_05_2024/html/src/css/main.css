@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.square div {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+#square1 {
+    background-color: blue;
+}
+
+#square2 {
+    background-color: #ff0000;
+}
+
+#square3 {
+    background-color: green;
+}
+
+#square4 {
+    background-color: none;
+}

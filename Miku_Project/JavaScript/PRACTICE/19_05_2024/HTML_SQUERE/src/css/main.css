@@ -1,26 +1,54 @@
+/* src/css/main.css */
 
+#container {
+    border: 1px solid brown;
+    padding: 10px;
+    width: 330px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+  }
 
-.square div {
+.square, .squareOne {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.square div, .squareOne div {
     width: 90px;
     height: 90px;
+    border-radius: 10px; 
 }
 
-
-#square1 {
-    background-color: blue;
+#square1, #square1One {
+    background-color: rgb(36, 200, 134);
 }
 
-#square2 {
-    background-color: #ff0000;
+#square2, #square2Two {
+    background-color: #3989bb;
 }
 
-#square3 {
-    background-color: green;
+#square3, #square3Tree {
+    background-color: rgb(177, 46, 155);
 }
 
 #square4 {
     background-color: none;
-    margin-top: 10px;
-    height: 30px;
-    width: 20;
+
 }
+
+.squares-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.event {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -100px;
+}
+

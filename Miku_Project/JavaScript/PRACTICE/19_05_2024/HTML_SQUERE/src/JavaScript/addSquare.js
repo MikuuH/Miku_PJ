@@ -22,5 +22,6 @@ document.getElementById('createButton').addEventListener('click', function() {
 
     container.appendChild(square);
     container.appendChild(addId);
-
 });
+
+container.onmouseover = container.onmouseout = handler;
