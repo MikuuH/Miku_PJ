@@ -1,13 +1,19 @@
 container.onmouseover = container.onmouseout = handler;
-var square1One = document.getElementById('square1One');
-var square2Two = document.getElementById('square2Two');
-var square3Tree = document.getElementById('square3Tree');
-var square4For = document.getElementById('square4For');
 
+const squareIds = [
+    "square1One",
+    "square2Two",
+    "square3Tree",
+    "square4For"
+]
 
+const squares = squareIds.map(id => document.getElementById(id));
+
+// цвет
 function getBackgroundColor(element) {
     return window.getComputedStyle(element).backgroundColor;
 }
+
 
 function handler(event) {
 
@@ -21,14 +27,8 @@ function handler(event) {
     ',  relatedTarget=' + str(event.relatedTarget) + "\n";
   log.scrollTop = log.scrollHeight;
 
-  if (event.type == 'mouseover') {
-    event.target.style.background = 'pink'
-  }
-  if (event.type == 'mouseout') {
-    event.target.style.background = ''
-  }
-
 }
+
 
 function updateEventDisplay(event) {
     let evem = event.target;
@@ -38,7 +38,9 @@ function updateEventDisplay(event) {
         // console.log('Цвет фона кликнутого элемента:', getBackgroundColor(evem));
     }
 }
-square1One.addEventListener('mouseover', updateEventDisplay);
-square2Two.addEventListener('mouseover', updateEventDisplay);
-square3Tree.addEventListener('mouseover', updateEventDisplay);
 
+//тут gpt подсказал, как можно сделать код короче. Оригинал в event.js
+squares.forEach(square => {
+    square.addEventListener('mouseover', updateEventDisplay);
+
+})
