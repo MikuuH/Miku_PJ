@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/css/main.css">
+</head>
+<body>
+
+    <form action="" class="input-login">
+        <div>
+            <div class="group-input">
+                <label for="firstName">firstName</label>
+                <input type="text" id="firstName" name="firstName">
+            </div>
+
+            <div class="group-input">
+                <label for="secomdName">secomdName</label>
+                <input type="text" id="secomdName" name="secomdName">
+            </div>
+
+            <div class="group-input">
+                <label for="email">email</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <div class="group-input">
+                <label for="login">login</label>
+                <input type="text" id="login" name="login">
+            </div>
+
+            <div class="group-input">
+                <label for="pass">pass</label>
+                <input type="password" id="pass" name="pass">
+            </div>
+
+            <div class="group-input-restore">
+                <label for="email-restore">email-restore</label>
+                <input type="email" id="email-restore" name="email-restore">
+            </div>
+
+            <button type="submit" id="submit" onclick="updateEventDisplay(event)">Login</button>
+
+            <script src="src/JavaScript/name.js"></script>
+        </div>
+
+        <div>
+            <button type="submitEmail" id="submitEmail" onclick="updateEmailDisplay(event)">submitEmail</button>
+            <script src="src/JavaScript/email.js"></script>
+        </div>
+
+
+    </form>
+
+</body>
+</html>
