@@ -8,7 +8,7 @@
 </head>
 <body>
     <form action="" onsubmit="handleLogin(event)" class="input-login" id="loginForm">
-        <div>
+        <div class="forms">
             <div class="group-input">
                 <label for="firstName">firstName</label>
                 <input type="text" id="firstName" name="firstName">
@@ -40,17 +40,24 @@
             </div>
             <button type="submit" id="submit" onclick="updateEventDisplay(event)">Login</button>
             <script src="src/JavaScript/name.js"></script>
+
+            <div>
+                <button type="submitEmail" id="submitEmail" onclick="updateEmailDisplay(event)">submitEmail</button>
+                <script src="src/JavaScript/email.js"></script>
+            </div>
+
+            <div>
+                <button type="savecook" id="savecook" onclick="handleLogin(event)">savecook</button>
+                <script src="src/JavaScript/cook.js"></script>
+            </div>
+
+            <div>
+                <button type="button" id="localstorage" onclick="gg(event)">localstorage</button>
+                <script src="src/JavaScript/localstorage.js"></script>
+            </div>
         </div>
 
-        <div>
-            <button type="submitEmail" id="submitEmail" onclick="updateEmailDisplay(event)">submitEmail</button>
-            <script src="src/JavaScript/email.js"></script>
-        </div>
 
-        <div>
-            <button type="savecook" id="savecook" onclick="handleLogin(event)">savecook</button>
-            <script src="src/JavaScript/cook.js"></script>
-        </div>
 
 
     </form>

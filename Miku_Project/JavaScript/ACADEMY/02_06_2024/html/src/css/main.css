@@ -1,6 +1,20 @@
-.. {
+
+body {
+    background-color: black;
+}
+
+.group-input {
+    color: aqua;
+}
+
+input {
+    background-color: rgb(57, 63, 63);
+}
+
+form{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 10px;
+    color: aqua;
 }
