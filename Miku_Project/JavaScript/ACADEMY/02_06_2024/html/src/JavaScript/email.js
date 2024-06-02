@@ -1,8 +1,4 @@
-
 var submitEmail = document.getElementById('submitEmail');
-
-
-console.log(getname);
 
 function updateEmailDisplay(event) {
     let evem = event.target;
@@ -18,6 +14,3 @@ function updateEmailDisplay(event) {
     }
 
 };
-
-
-submitEmail.addEventListener('click', updateEmailDisplay);
