@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="src/css/main.css">
 </head>
 <body>
-
-    <form action="" class="input-login">
+    <form action="" onsubmit="handleLogin(event)" class="input-login" id="loginForm">
         <div>
             <div class="group-input">
                 <label for="firstName">firstName</label>
@@ -43,11 +42,17 @@
             <button type="submit" id="submit" onclick="updateEventDisplay(event)">Login</button>
 
             <script src="src/JavaScript/name.js"></script>
+
         </div>
 
         <div>
             <button type="submitEmail" id="submitEmail" onclick="updateEmailDisplay(event)">submitEmail</button>
             <script src="src/JavaScript/email.js"></script>
+        </div>
+
+        <div>
+            <button type="savecook" id="savecook" onclick="handleLogin(event)">savecook</button>
+            <script src="src/JavaScript/cook.js"></script>
         </div>
 
 
