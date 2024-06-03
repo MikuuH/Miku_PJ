@@ -36,6 +36,7 @@ function returnLowerCase(key) {
 
 function infoPurchases(lst) {
     let result = lst.filter(item => item.purchased);
+    console.log(result);
 
             // длина объекта > 0:
     if(lst && result.length > 0) {
@@ -44,10 +45,9 @@ function infoPurchases(lst) {
         console.log("ну блин! Зачем мне пустой список?!")
     }
 
-    console.log(user);
 
 };
-
+infoPurchases(listPurchases)
 
 function addPurchases(product) {
     if (product.name && product.cout !== undefined && product.purchased !== undefined) {
@@ -89,7 +89,7 @@ function purchasedProduct(nameProdut) {
 
 }
 
-console.log(returnLowerCase(11))
+//console.log(returnLowerCase(11))
 
 // purchasedProduct("Молоко");
 

@@ -13,8 +13,7 @@ var css = [
 
 var text = "hello! im Miku!";
 
-
-function gg(text, css) {
+function addCssStyles(text, css) {
     let styles = "";
 
     for(let i in css) {
@@ -24,10 +23,9 @@ function gg(text, css) {
     }
 
     document.write(`<p style="${styles}">${text}</p>`);
+};
 
-}
-
-gg(text, css);
+addCssStyles(text, css);
 
 
 

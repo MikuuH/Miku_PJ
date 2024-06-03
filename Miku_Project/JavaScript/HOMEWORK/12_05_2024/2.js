@@ -28,7 +28,7 @@ function infoTtoreReceipt(info) {
     return(a + "\n" + h);
 }
 
-
+//console.log(infoTtoreReceipt(mass));
 function FindMaxPriceProduct(mass) {
     let price = mass[0].price,
         MaxPrice = Math.max(...price),
