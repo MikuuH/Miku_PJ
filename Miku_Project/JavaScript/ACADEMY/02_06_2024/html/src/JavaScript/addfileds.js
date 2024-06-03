@@ -1,13 +1,12 @@
+// addfields.js
 function ff(event) {
-    event.preventDefault(); // Предотвращаем стандартное поведение формы
-
+    event.preventDefault();
     const username = document.getElementById('login').value;
     alert(username)
     const password = document.getElementById('pass').value;
-
-    var userInfo = document.createElement('div');
-    userInfo.innerHTML = '<p>Username:</p> ' + username + '<br>' +
-                         '<p>Password:</p> ' + password;
-
+    const userInfo = document.createElement('div');
+    userInfo.innerHTML = `<strong>Username:</strong> ${username}<br><strong>Password:</strong> ${password}`;
     document.getElementById('userInfo').appendChild(userInfo);
-};
+    document.createElement('/div');
+    document.getElementById('loginForm').reset();
+}
