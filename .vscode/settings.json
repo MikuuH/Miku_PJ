@@ -68,6 +68,7 @@
     "typeinfo": "cpp",
     "sstream": "cpp",
     "chrono": "cpp",
-    "text_encoding": "cpp"
+    "text_encoding": "cpp",
+    "updateField.C": "cpp"
   }
 }
