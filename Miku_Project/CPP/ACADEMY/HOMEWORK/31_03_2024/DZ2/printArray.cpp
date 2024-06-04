@@ -3,19 +3,20 @@
 
 using namespace std;
 
-// Возвращает наибольшее число
+
 template <typename T>
-T maxValue(T one, T two) {
-    return (one > two) ? one : two;
-}
+T printArray(T* arrInp, T sizeInp) {
+    for (int i = 0; i < sizeInp; i++) {
+        cout << arrInp[i] << "" << endl;
+    }
+    return 0;
+};
 
 
 int main() {
     cout << "И снова приветик! Тебя приветствует Айми.. Я думаю, ты помнишь меня! Мы с тобой совсем недавно виделись. Что же, прими новое домашнее задание от @MikuSv0!" << endl << endl;
 
-    cout << "maxValue: INT: " << maxValue<int>(1, 10) << endl;
-    cout << "maxValue: FLOAT: " << maxValue<float>(7.9, 1.9) << endl;
-    cout << "maxValue: CHAR: " << maxValue<string>("люблю", "МИКУ");
-
-    return 0;
+    int size_arr = 6;
+    int arr[6] = {1, 2, 3, 4, 5};
+    cout << "printArray" << printArray(arr, size_arr) << endl;
 }

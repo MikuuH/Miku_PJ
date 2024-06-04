@@ -64,6 +64,10 @@
     "ostream": "cpp",
     "string": "cpp",
     "format": "cpp",
-    "vector": "cpp"
+    "vector": "cpp",
+    "typeinfo": "cpp",
+    "sstream": "cpp",
+    "chrono": "cpp",
+    "text_encoding": "cpp"
   }
 }
