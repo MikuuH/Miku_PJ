@@ -3,12 +3,12 @@
 
 using namespace std;
 
-struct Car
+struct Employee
 {
-    string model;
-    int number;
+    string member;
+    int id;
 
-    Car(string m, int n) : model(m), number(n) {}
+    Employee(string m, int n) : member(m), id(n) {}
 };
 
 
@@ -24,18 +24,15 @@ bool isEqual(
 int main() {
     cout << "И снова приветик! Тебя приветствует Айми.. Я думаю, ты помнишь меня! Мы с тобой совсем недавно виделись. Что же, прими новое домашнее задание от @MikuSv0!" << endl << endl;
 
-    Car car1("modelY", 123);
-    Car car2("modelY", 456);
-    Car car3("modelX", 123);
+    Employee employee1("Муж бил жену", 123);
+    Employee employee2("Я - ты - мы", 456);
+    Employee employee3("хахахах!", 123);
 
-    cout << "равно ли кар1 : кар2"
-         << (isEqual(car1, car2, &Car::model) ? "оказывается равно" : "Не равно!") << endl;
+    cout << "равно ли employee1 : employee2: "
+         << (isEqual(employee1, employee2, &Employee::id) ? "оказывается равно" : "Не равно!") << endl;
 
-    cout << "равно ли кар1 : кар2"
-         << (isEqual(car1, car2, &Car::number) ? "оказывается равно" : "Не равно!") << endl;
-
-    cout << "равно ли кар1 : кар3"
-         << (isEqual(car1, car3, &Car::number) ? "оказывается равно" : "Не равно!") << endl;
+    cout << "равно ли employee1 : employee3: "
+         << (isEqual(employee1, employee3, &Employee::id) ? "оказывается равно" : "Не равно!") << endl;
 
     return 0;
 }
