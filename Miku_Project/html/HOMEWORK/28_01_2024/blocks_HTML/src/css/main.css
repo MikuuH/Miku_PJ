@@ -90,7 +90,6 @@ h1 {
 
 footer a {
   color: black;
-
 }
 
 footer a::after {
@@ -98,3 +97,72 @@ footer a::after {
   color: black;
 }
 
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 255, 255, 0.273);
+  height: 30px;
+  width: 100%;
+}
+
+header a {
+  flex: 1;
+  color: blue;
+  background-color: aqua;
+  padding: 5px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Стили для выпадающего меню */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown .dropbtn {
+  padding: 5px;
+  background-color: #007bff; /* Синий цвет фона */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  position: relative;
+  left: 100px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #00d9ff; /* Светло-серый фон */
+  min-width: 160px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.2); /* Тень выпадающего меню */
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Показывать выпадающее меню при наведении */
+}
+
+.btn {
+  padding: 10px 20px; /* Отступы кнопки */
+  background-color: #ff4500; /* Цвет фона кнопки */
+  color: white; /* Цвет текста кнопки */
+  border: none; /* Убираем границу кнопки */
+  cursor: pointer; /* Курсор в виде указателя */
+  border-radius: 6px; /* Скругляем углы кнопки */
+  transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+
+.btn:hover {
+  background-color: #cc3700; /* Цвет фона кнопки при наведении */
+}
