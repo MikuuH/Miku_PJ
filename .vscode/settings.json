@@ -58,6 +58,7 @@
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "C_Cpp.errorSquiggles": "disabled",
   "files.associations": {
+    "*.embeddedhtml": "html",
     "*.tsx": "javascriptreact",
     "*.jsx": "javascript",
     "iostream": "cpp",
@@ -69,6 +70,9 @@
     "sstream": "cpp",
     "chrono": "cpp",
     "text_encoding": "cpp",
-    "updateField.C": "cpp"
+    "updateField.C": "cpp",
+    "random": "cpp",
+    "stdexcept": "cpp",
+    "string_view": "cpp"
   }
 }
