@@ -204,11 +204,17 @@ class Bus : public Car {
         }
 };
 
-void addNewCars() {
+void addNewSedan(string cars) {
+
     string color;
     int wheels;
     float maxSpeed;
     int cargo;
+
+
+    if (cars == "Sedan") {
+
+    }
 
 
     Sedan* mySedan = new Sedan(color, wheels, maxSpeed, cargo);
@@ -228,7 +234,7 @@ void addNewCars() {
     switch (choice)
     {
     case 1:
-        addNewSedan();
+        addNewSedan("Sedan");
 
         break;
 
