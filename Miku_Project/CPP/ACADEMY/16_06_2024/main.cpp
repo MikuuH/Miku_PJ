@@ -205,8 +205,17 @@ class Bus : public Car {
 };
 
 void addNewSedan() {
+    string color;
+    int wheels;
+    float maxSpeed;
+    int cargo;
+
+    
 
 
+
+    Sedan* mySedan = new Sedan("Red", 4, 180.5, 4100);
+    mySedan->displayInfo();
 };
 
 
@@ -222,7 +231,7 @@ void addNewCars() {
     switch (choice)
     {
     case 1:
-        cout << "hello!" << endl;
+        addNewSedan();
 
         break;
 

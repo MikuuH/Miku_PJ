@@ -73,6 +73,7 @@
     "updateField.C": "cpp",
     "random": "cpp",
     "stdexcept": "cpp",
-    "string_view": "cpp"
+    "string_view": "cpp",
+    "new": "cpp"
   }
 }
