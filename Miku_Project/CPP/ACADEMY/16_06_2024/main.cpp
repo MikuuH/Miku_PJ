@@ -143,12 +143,8 @@ class Bus : public Car {
         }
 };
 
-void addNewCar(string cars) {
-        cars* my{car} = new cars(color, wheels, maxSpeed, cargo);
-}
 
-
-void addNewCar(string cars) {
+Car* addNewCar(string cars) {
     int axis;
     string color;
     int wheels;
@@ -162,25 +158,18 @@ void addNewCar(string cars) {
     }
 
     if (cars == "Sedan") {
-        Sedan* mySedan = new Sedan(color, wheels, maxSpeed, cargo);
-        cout << "Новый " << cars << "Создан!" << endl;
-        mySedan->displayInfo();
+        return new Sedan(color, wheels, maxSpeed, cargo);
     }
     else if (cars == "Pickup") {
-        Pickup* myPickup = new Pickup(color, wheels, maxSpeed, cargo);
-        cout << "Новый " << cars << "Создан!" << endl;
-        myPickup->displayInfo();
+        return new Pickup(color, wheels, maxSpeed, cargo);
+
     }
 
     if (cars == "Truck") {
-        Truck* myTruck = new Truck(color, wheels, maxSpeed, cargo, axis);
-        cout << "Новый " << cars << "Создан!" << endl;
-        myTruck->displayInfo();
+        return new Truck(color, wheels, maxSpeed, cargo, axis);
     }
     else if (cars == "Bus") {
-        Bus* myBus = new Bus(color, wheels, maxSpeed, cargo, axis);
-        cout << "Новый " << cars << "Создан!" << endl;
-        myBus->displayInfo();
+        return new Bus(color, wheels, maxSpeed, cargo, axis);
     }
 };
 
@@ -216,6 +205,15 @@ void choiceNewCars() {
 };
 
 int main() {
-    choiceNewCars();
+
+    string carType;
+    cout << "Введите тип автомобиля (Sedan, Pickup, Truck, Bus): ";
+    cin >> carType;
+
+    Car* newCar = addNewCar(carType);
+    newCar->displayInfo();
+
+
+    //choiceNewCars();
     return 0;
 }
