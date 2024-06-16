@@ -162,7 +162,6 @@ Car* addNewCar(string cars) {
     }
     else if (cars == "Pickup") {
         return new Pickup(color, wheels, maxSpeed, cargo);
-
     }
 
     if (cars == "Truck") {
