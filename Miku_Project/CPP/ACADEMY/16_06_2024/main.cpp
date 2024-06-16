@@ -43,7 +43,7 @@ class Car {
             color = c;
             wheels = w;
 
-            if (w < 4 || w > 8) {
+            if (w < 4) {
                 throw invalid_argument("от 4 до 8 колес максимум.");
             }
         }
@@ -145,11 +145,20 @@ class Bus : public Car {
 
 
 Car* addNewCar(string cars) {
-    int axis;
+    int cargo;
     string color;
     int wheels;
     float maxSpeed;
-    int cargo;
+    int axis = 3; // По умолчанию для Truck и Bus
+
+    cout << "Введите цвет: ";
+    cin >> color;
+    cout << "Введите количество колес: ";
+    cin >> wheels;
+    cout << "Введите максимальную скорость: ";
+    cin >> maxSpeed;
+    cout << "Введите грузоподъемность или вместимость: ";
+    cin >> cargo;
 
     if (cars == "Truck" || cars == "Bus") {
         cout << "Какая ось должна быть у " << cars << endl;
@@ -204,15 +213,15 @@ void choiceNewCars() {
 };
 
 int main() {
-
     string carType;
     cout << "Введите тип автомобиля (Sedan, Pickup, Truck, Bus): ";
     cin >> carType;
 
-    Car* newCar = addNewCar(carType);
-    newCar->displayInfo();
+        Car* newCar = addNewCar(carType);
+
+        newCar->displayInfo();
 
 
-    //choiceNewCars();
+
     return 0;
 }
