@@ -37,7 +37,8 @@ class Car : public Vehicle {
     public:
         int numberOfDoors;
 
-        Car(int maxSpeedInfo, string fuelTypeInfo, int doors) : Vehicle(maxSpeedInfo, fuelTypeInfo), numberOfDoors(doors) {}
+        Car(int maxSpeedInfo, string fuelTypeInfo, int doors)
+            : Vehicle(maxSpeedInfo, fuelTypeInfo), numberOfDoors(doors) {}
 
         void VehicleFullInfo() const override {
             Vehicle::VehicleFullInfo();
