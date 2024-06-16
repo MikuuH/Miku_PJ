@@ -42,8 +42,8 @@ class Car {
             color = c;
             wheels = w;
 
-            if (w < 4) {
-                throw invalid_argument("должно быть 4 колеса!, или больше!");
+            if (w < 4 || w > 8) {
+                throw invalid_argument("от 4 до 8 колес максимум.");
             }
         }
 
@@ -119,17 +119,16 @@ class Truck : public Car {
 };
 
 class Bus : public Car {
-    private:
-        int axis = 2;
-
     public:
         float maxSpeed;
         int cargo;
+        int axis = 3;
 
-        Bus(string c, int w, float maxSpeedBus, int cargoBus)
+        Bus(string c, int w, float maxSpeedBus, int cargoBus, int axisBus)
             : Car(c, w),
                 maxSpeed(maxSpeedBus),
-                cargo(cargoBus) {}
+                cargo(cargoBus),
+                axis(axisBus) {}
 
         void displayInfo() const override {
             Car::displayInfo();
@@ -140,22 +139,17 @@ class Bus : public Car {
 };
 
 void addNewCar(string cars) {
-
+    int axis;
     string color;
     int wheels;
     float maxSpeed;
     int cargo;
 
-
-    cout << "Цвет " << cars << endl;
-    cin >> color;
-    cout << "Сколько колес у " << cars << endl;
-    cin >> wheels;
-    cout << "макс. скорость " << cars << endl;
-    cin >> maxSpeed;
-    cout << "грузоподьёмность " << cars << endl;
-    cin >> cargo;
-
+    if (cars == "Truck" || cars == "Bus") {
+        cout << "Какая ось должна быть у " << cars << endl;
+        cout << "По умолчанию - 3" << endl;
+        cin >> axis;
+    }
 
     if (cars == "Sedan") {
         Sedan* mySedan = new Sedan(color, wheels, maxSpeed, cargo);
@@ -163,12 +157,21 @@ void addNewCar(string cars) {
         mySedan->displayInfo();
     }
     else if (cars == "Pickup") {
-        Sedan* mySedan = new Sedan(color, wheels, maxSpeed, cargo);
+        Pickup* myPickup = new Pickup(color, wheels, maxSpeed, cargo);
         cout << "Новый " << cars << "Создан!" << endl;
-        mySedan->displayInfo();
+        myPickup->displayInfo();
     }
 
-
+    if (cars == "Truck") {
+        Truck* myTruck = new Truck(color, wheels, maxSpeed, cargo, axis);
+        cout << "Новый " << cars << "Создан!" << endl;
+        myTruck->displayInfo();
+    }
+    else if (cars == "Bus") {
+        Bus* myBus = new Bus(color, wheels, maxSpeed, cargo, axis);
+        cout << "Новый " << cars << "Создан!" << endl;
+        myBus->displayInfo();
+    }
 };
 
 
@@ -190,10 +193,10 @@ void choiceNewCars() {
         addNewCar("Pickup");
         break;
     case 3:
-        addNewCar("Truck")
+        addNewCar("Truck");
         break;
     case 4:
-        addNewCar("Bus")
+        addNewCar("Bus");
         break;
 
     default:
@@ -203,24 +206,6 @@ void choiceNewCars() {
 };
 
 int main() {
-
-    // try
-    // {
-    //     Sedan mySedan("Red", 4, 180.5, 4100);
-    //     mySedan.displayInfo();
-    // }
-    // catch(const std::invalid_argument& e)
-    // {
-    //     std::cerr << e.what() << '\n';
-    // }
-
-    // // Создаем объект класса Car и передаем параметры конструктору
-    // Car* myCar = new Car(brand, model, mileage, year);
-
-    // // Изменяем мощность двигателя машины
-    // myCar->editCarPower(12);
-
-
     choiceNewCars();
     return 0;
 }
