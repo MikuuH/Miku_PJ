@@ -212,8 +212,20 @@ void addNewSedan(string cars) {
     int cargo;
 
 
-    if (cars == "Sedan") {
+    cout << "Цвет " << cars << endl;
+    cin >> color;
+    cout << "Сколько колес у " << cars << endl;
+    cin >> wheels;
+    cout << "макс. скорость " << cars << endl;
+    cin >> maxSpeed;
+    cout << "грузоподьёмность " << cars << endl;
+    cin >> cargo;
 
+
+    if (cars == "Sedan") {
+        Sedan* mySedan = new Sedan(color, wheels, maxSpeed, cargo);
+        cout << "Новый Sedan Создан!" << endl;
+        mySedan->displayInfo();
     }
 
 
