@@ -204,7 +204,7 @@ class Bus : public Car {
         }
 };
 
-void addNewSedan(string cars) {
+void addNewCar(string cars) {
 
     string color;
     int wheels;
@@ -227,14 +227,15 @@ void addNewSedan(string cars) {
         cout << "Новый Sedan Создан!" << endl;
         mySedan->displayInfo();
     }
+    else if (cars == "ff") {
+
+    }
 
 
-    Sedan* mySedan = new Sedan(color, wheels, maxSpeed, cargo);
-    mySedan->displayInfo();
 };
 
 
-void addNewCars() {
+void choiceNewCars() {
     int choice;
 
     cout <<
@@ -246,8 +247,16 @@ void addNewCars() {
     switch (choice)
     {
     case 1:
-        addNewSedan("Sedan");
-
+        addNewCar("Sedan");
+        break;
+    case 2:
+        addNewCar("Pickup");
+        break;
+    case 3:
+        addNewCar("Truck")
+        break;
+    case 4:
+        addNewCar("Bus")
         break;
 
     default:
@@ -275,6 +284,6 @@ int main() {
     // myCar->editCarPower(12);
 
 
-    addNewCars();
+    choiceNewCars();
     return 0;
 }
