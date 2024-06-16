@@ -204,17 +204,14 @@ class Bus : public Car {
         }
 };
 
-void addNewSedan() {
+void addNewCars() {
     string color;
     int wheels;
     float maxSpeed;
     int cargo;
 
-    
 
-
-
-    Sedan* mySedan = new Sedan("Red", 4, 180.5, 4100);
+    Sedan* mySedan = new Sedan(color, wheels, maxSpeed, cargo);
     mySedan->displayInfo();
 };
 
