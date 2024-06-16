@@ -106,7 +106,7 @@ class Car {
             color = c;
             wheels = w;
 
-            if (w != 4) {
+            if (w < 4) {
                 throw invalid_argument("должно быть 4 колеса!, или больше!");
             }
         }
@@ -163,17 +163,16 @@ class Pickup : public Car {
 };
 
 class Truck : public Car {
-    private:
-        int axis = 2;
-
     public:
         float maxSpeed;
         int cargo;
+        int axis = 3;
 
-        Truck(string c, int w, float maxSpeedTruck, int cargoTruck)
+        Truck(string c, int w, float maxSpeedTruck, int cargoTruck, int axisTruck)
             : Car(c, w),
                 maxSpeed(maxSpeedTruck),
-                cargo(cargoTruck) {}
+                cargo(cargoTruck),
+                axis(axisTruck) {}
 
         void displayInfo() const override {
             Car::displayInfo();
@@ -224,11 +223,13 @@ void addNewCar(string cars) {
 
     if (cars == "Sedan") {
         Sedan* mySedan = new Sedan(color, wheels, maxSpeed, cargo);
-        cout << "Новый Sedan Создан!" << endl;
+        cout << "Новый " << cars << "Создан!" << endl;
         mySedan->displayInfo();
     }
-    else if (cars == "ff") {
-
+    else if (cars == "Pickup") {
+        Sedan* mySedan = new Sedan(color, wheels, maxSpeed, cargo);
+        cout << "Новый " << cars << "Создан!" << endl;
+        mySedan->displayInfo();
     }
 
 
