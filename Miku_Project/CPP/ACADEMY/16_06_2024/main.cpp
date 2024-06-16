@@ -213,14 +213,6 @@ void choiceNewCars() {
 };
 
 int main() {
-    string carType;
-    cout << "Введите тип автомобиля (Sedan, Pickup, Truck, Bus): ";
-    cin >> carType;
-
-        Car* newCar = addNewCar(carType);
-
-        newCar->displayInfo();
-
 
 
     return 0;
