@@ -33,6 +33,7 @@ Bus: Для автобусов.
 #include <string>
 using namespace std;
 
+
 class Car {
     public:
         string color;
@@ -52,6 +53,7 @@ class Car {
             cout << "Wheels: " << wheels << endl;
         }
 };
+
 
 class Sedan : public Car {
     private:
@@ -77,6 +79,7 @@ class Sedan : public Car {
         }
 };
 
+
 class Pickup : public Car {
     private:
         int axis = 2;
@@ -98,6 +101,7 @@ class Pickup : public Car {
         }
 };
 
+
 class Truck : public Car {
     public:
         float maxSpeed;
@@ -118,6 +122,7 @@ class Truck : public Car {
         }
 };
 
+
 class Bus : public Car {
     public:
         float maxSpeed;
@@ -137,6 +142,7 @@ class Bus : public Car {
             cout << "Seating Capacity: " << cargo << endl;
         }
 };
+
 
 void addNewCar(string cars) {
     int axis;
