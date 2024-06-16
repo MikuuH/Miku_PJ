@@ -143,6 +143,10 @@ class Bus : public Car {
         }
 };
 
+void addNewCar(string cars) {
+        cars* my{car} = new cars(color, wheels, maxSpeed, cargo);
+}
+
 
 void addNewCar(string cars) {
     int axis;
