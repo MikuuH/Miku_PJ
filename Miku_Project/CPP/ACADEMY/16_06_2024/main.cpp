@@ -204,18 +204,53 @@ class Bus : public Car {
         }
 };
 
+void addNewSedan() {
 
+
+};
+
+
+void addNewCars() {
+    int choice;
+
+    cout <<
+        "можно добавить:\n1. Sedan\n2. Pickup\n3. Truck\n4. Bus" << endl;
+    cout << "ваш выбор?" << endl;
+
+    cin >> choice;
+
+    switch (choice)
+    {
+    case 1:
+        cout << "hello!" << endl;
+
+        break;
+
+    default:
+        cerr << "максимум от 1 до 4." << endl;
+    }
+
+};
 
 int main() {
 
-    try
-    {
-        Sedan mySedan("Red", 4, 180.5, 4100);
-        mySedan.displayInfo();
-    }
-    catch(const std::invalid_argument& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
+    // try
+    // {
+    //     Sedan mySedan("Red", 4, 180.5, 4100);
+    //     mySedan.displayInfo();
+    // }
+    // catch(const std::invalid_argument& e)
+    // {
+    //     std::cerr << e.what() << '\n';
+    // }
+
+    // // Создаем объект класса Car и передаем параметры конструктору
+    // Car* myCar = new Car(brand, model, mileage, year);
+
+    // // Изменяем мощность двигателя машины
+    // myCar->editCarPower(12);
+
+
+    addNewCars();
     return 0;
 }
